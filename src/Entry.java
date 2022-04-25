@@ -57,87 +57,10 @@ public class Entry {
         for(String word : words){
             word = word.toLowerCase();
             for(int i = 0; i < word.length(); i++) {
-                switch (word.charAt(i)){
-                    case 'a':
-                        this.letters.replace('a', letters.get('a') + 1);
-                        break;
-                    case 'b':
-                        this.letters.replace('b', letters.get('b') + 1);
-                        break;
-                    case 'c':
-                        this.letters.replace('c', letters.get('c') + 1);
-                        break;
-                    case 'd':
-                        this.letters.replace('d', letters.get('d') + 1);
-                        break;
-                    case 'e':
-                        this.letters.replace('e', letters.get('e') + 1);
-                        break;
-                    case 'f':
-                        this.letters.replace('f', letters.get('f') + 1);
-                        break;
-                    case 'g':
-                        this.letters.replace('g', letters.get('g') + 1);
-                        break;
-                    case 'h':
-                        this.letters.replace('h', letters.get('h') + 1);
-                        break;
-                    case 'i':
-                        this.letters.replace('i', letters.get('i') + 1);
-                        break;
-                    case 'j':
-                        this.letters.replace('j', letters.get('j') + 1);
-                        break;
-                    case 'k':
-                        this.letters.replace('k', letters.get('k') + 1);
-                        break;
-                    case 'l':
-                        this.letters.replace('l', letters.get('l') + 1);
-                        break;
-                    case 'm':
-                        this.letters.replace('m', letters.get('m') + 1);
-                        break;
-                    case 'n':
-                        this.letters.replace('n', letters.get('n') + 1);
-                        break;
-                    case 'o':
-                        this.letters.replace('o', letters.get('o') + 1);
-                        break;
-                    case 'p':
-                        this.letters.replace('p', letters.get('p') + 1);
-                        break;
-                    case 'q':
-                        this.letters.replace('q', letters.get('q') + 1);
-                        break;
-                    case 'r':
-                        this.letters.replace('r', letters.get('r') + 1);
-                        break;
-                    case 's':
-                        this.letters.replace('s', letters.get('s') + 1);
-                        break;
-                    case 't':
-                        this.letters.replace('t', letters.get('t') + 1);
-                        break;
-                    case 'u':
-                        this.letters.replace('u', letters.get('u') + 1);
-                        break;
-                    case 'v':
-                        this.letters.replace('v', letters.get('v') + 1);
-                        break;
-                    case 'w':
-                        this.letters.replace('w', letters.get('w') + 1);
-                        break;
-                    case 'x':
-                        this.letters.replace('x', letters.get('x') + 1);
-                        break;
-                    case 'y':
-                        this.letters.replace('y', letters.get('y') + 1);
-                        break;
-                    case 'z':
-                        this.letters.replace('z', letters.get('z') + 1);
-                        break;
-                    default:
-                        break;
+                try {
+                    letters.replace(word.charAt(i), letters.get(word.charAt(i)) + 1);
+                } catch (NullPointerException e) {
+                    //ignoring this character
                 }
             }
         }
