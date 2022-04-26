@@ -1,0 +1,2 @@
+Put a language in TextToFind.txt and run the program.
+If you want to add a new language, add it the same way Polish, German, Swedish etc. are structured. Make a directory and provide a few examples.
